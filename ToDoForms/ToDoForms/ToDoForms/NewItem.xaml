@@ -9,14 +9,14 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <Entry x:Name="NameEntry" Placeholder="Name Task" Grid.ColumnSpan="2"/>
 
         <DatePicker Grid.Row="1" />
-        <DatePicker Grid.Row="1" Grid.Column="1" />
+        <TimePicker Grid.Row="1" Grid.Column="1" />
 
         <Button Text="Save" Grid.Row="2" Grid.ColumnSpan="2" Clicked="Button_Clicked" />
 
