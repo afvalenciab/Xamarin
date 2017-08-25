@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ToDoForms.NewItem">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="Auto" />
+        </Grid.ColumnDefinitions>
+
+        <Entry x:Name="NameEntry" Placeholder="Name Task" Grid.ColumnSpan="2"/>
+
+        <DatePicker Grid.Row="1" />
+        <DatePicker Grid.Row="1" Grid.Column="1" />
+
+        <Button Text="Save" Grid.Row="2" Grid.ColumnSpan="2" Clicked="Button_Clicked" />
+
+    </Grid>
+</ContentPage>
