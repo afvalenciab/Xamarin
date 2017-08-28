@@ -14,10 +14,8 @@
         </Grid.ColumnDefinitions>
 
         <Entry x:Name="NameEntry" Placeholder="Name Task" Grid.ColumnSpan="2"/>
-
-        <DatePicker Grid.Row="1" />
-        <TimePicker Grid.Row="1" Grid.Column="1" />
-
+        <DatePicker Grid.Row="1" x:Name="dateLimitDatePicker" />
+        <TimePicker Grid.Row="1" Grid.Column="1" x:Name="hourLimiteTimePicker" />
         <Button Text="Save" Grid.Row="2" Grid.ColumnSpan="2" Clicked="Button_Clicked" />
 
     </Grid>

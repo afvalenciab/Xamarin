@@ -9,11 +9,20 @@ namespace ToDoForms
 {
     public partial class App : Application
     {
+        public static string RutaDB;
+
         public App()
         {
             InitializeComponent();
 
             MainPage = new NavigationPage(new ToDoForms.MainPage());
+        }
+
+        public App(string rutaBD)
+        {            
+            InitializeComponent();
+            RutaDB = rutaBD;
+            MainPage = new NavigationPage(new ToDoForms.MainPage());            
         }
 
         protected override void OnStart()

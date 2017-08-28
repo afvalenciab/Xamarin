@@ -4,6 +4,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using System.IO;
 
 namespace ToDoForms.iOS
 {
@@ -23,7 +24,14 @@ namespace ToDoForms.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
+
+
+            string nombreArchivoDB = "baseDatos.sqlite";
+            string ruta = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "..", "Library"); 
+     
+            string ruta_db = Path.Combine(ruta, nombreArchivoDB);
+
+            LoadApplication(new App(ruta_db));
 
             return base.FinishedLaunching(app, options);
         }
