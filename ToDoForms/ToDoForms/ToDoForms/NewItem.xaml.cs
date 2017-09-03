@@ -38,5 +38,10 @@ namespace ToDoForms
                     DisplayAlert("Error","Intenta de nuevo","OK");                   
             }            
         }
+
+        async private void Button_ViewLIst(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ListaTareas());
+        }
     }
 }

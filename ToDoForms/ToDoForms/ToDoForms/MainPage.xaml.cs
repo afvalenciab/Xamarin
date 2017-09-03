@@ -23,7 +23,7 @@ namespace ToDoForms
             else
             {
                 resultLabel.Text = "Login Success";
-                await Navigation.PushAsync(new ListaTareas());
+                await Navigation.PushAsync(new NewItem());
             }
         }
     }

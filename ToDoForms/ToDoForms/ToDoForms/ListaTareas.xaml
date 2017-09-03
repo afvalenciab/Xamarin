@@ -5,7 +5,11 @@
     <ListView x:Name="listaTareasListView">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Nombre}" Detail="{Binding Fecha}" />
+                <TextCell Text="{Binding Nombre}" Detail="{Binding Fecha}">
+                    <TextCell.ContextActions>
+                        <MenuItem  Text="To Complete" CommandParameter="{Binding}" Clicked="MenuItem_Clicked" />
+                    </TextCell.ContextActions>
+                </TextCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
