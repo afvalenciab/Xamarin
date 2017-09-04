@@ -2,6 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToDoForms.NewItem">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="accentColor">#7FC719</Color>
+            <Color x:Key="buttonTextColor">#FFFFFF</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -13,11 +19,13 @@
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Entry x:Name="NameEntry" Placeholder="Name Task" Grid.ColumnSpan="2"/>
-        <DatePicker Grid.Row="1" x:Name="dateLimitDatePicker" />
-        <TimePicker Grid.Row="1" Grid.Column="1" x:Name="hourLimiteTimePicker" />
-        <Button Text="Save" Grid.Row="2" Grid.Column="0" Clicked="Button_Clicked" />
-        <Button Text="View List" Grid.Row="2" Grid.Column="1" Clicked="Button_ViewLIst"/>
+        <Entry x:Name="NameEntry" Placeholder="Name Task" Grid.ColumnSpan="2" TextColor="{StaticResource accentColor}"/>
+        <DatePicker Grid.Row="1" x:Name="dateLimitDatePicker" TextColor="{StaticResource accentColor}"/>
+        <TimePicker Grid.Row="1" Grid.Column="1" x:Name="hourLimiteTimePicker" TextColor="{StaticResource accentColor}"/>
+        <Button Text="Save" Grid.Row="2" Grid.Column="0" Clicked="Button_Clicked" BackgroundColor="{StaticResource accentColor}" 
+                TextColor="{StaticResource buttonTextColor}"/>
+        <Button Text="View List" Grid.Row="2" Grid.Column="1" Clicked="Button_ViewLIst" BackgroundColor="{StaticResource accentColor}" 
+                TextColor="{StaticResource buttonTextColor}"/>
 
     </Grid>
 </ContentPage>

@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:ToDoForms"
              x:Class="ToDoForms.MainPage">
     <StackLayout VerticalOptions="Center" Margin="20">
-        <Entry x:Name="userEntry" Placeholder="User Name"/>
+        <Entry x:Name="userEntry" Placeholder="User Name" />
         <Entry x:Name="PassEntry" Placeholder="Password" IsPassword="True" />
         <Button Text="Sign In" Clicked="Button_Clicked" />
         <Label x:Name="resultLabel" HorizontalOptions="Center"/>
