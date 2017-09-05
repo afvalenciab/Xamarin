@@ -2,9 +2,20 @@
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ToDoForms.App">
-	<Application.Resources>
+    <Application.Resources>
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <Color x:Key="colorText">#627870</Color>
+            <Color x:Key="backgroundColor">#a4c639</Color>
+            <Color x:Key="buttonColor">#B40404</Color>
 
-		<!-- Application resource dictionary -->
-
-	</Application.Resources>
+            <Style TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource buttonColor}" />
+            </Style>
+            <Style x:Key="styleLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="30" />
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
 </Application>
